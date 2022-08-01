@@ -6,7 +6,7 @@
 
 .icons{
     display: inline-block;
-    margin-left: 805px;
+    margin-left: 970px;
     padding-top: 8px;
     position: relative;
     bottom:56px;
@@ -18,7 +18,7 @@
 
 .input-lg{
     border: none;
-    width: 70%;
+    width: 92.7%;
     height: 55px;
     box-shadow: none;
     background-color: rgb(253, 239, 108);
@@ -34,19 +34,20 @@
     margin-right: 13px;
 }
 
-.col-xs-offset-3.col-xs-6:first-of-type{
+.col-xs-12:first-of-type{
     overflow-y: scroll;
-    height: 500px;
+    height: 551px;
     background-color: rgb(245, 245, 220);
+    padding-top:15px;
+}
+
+.col-xs-12{
+    background-color: rgb(253, 239, 108);
+    border-radius: 5px;
 }
 
 #title{
-    margin-left: 490px;
-}
-
-.col-xs-offset-3.col-sm-6{
-    padding-right: 17px;
-    width: 946px;
+    margin-left: 407px;
 }
 
 .buttons{
@@ -56,7 +57,7 @@
 }
 
 .inputbox{
-    width:100%;
+    width: 1059px;
     height: 30px;   
     padding-top: 5px;
     padding-bottom: 5px;
@@ -71,6 +72,7 @@ input:focus{
 .panel-body{
     height: 60px; 
     padding-block-start: 19px; 
+    font-size: medium;
 }
 
 .show-icon{
