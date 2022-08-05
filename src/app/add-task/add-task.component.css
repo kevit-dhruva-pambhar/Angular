@@ -1,0 +1,24 @@
+.col-xs-12{
+    background-color: rgb(253, 239, 108);
+    border-radius: 5px;
+    height: 60px;
+}
+
+.input-lg{
+    border: none;
+    padding-top: 23px;
+    box-shadow: none;
+    background-color: rgb(253, 239, 108);
+    padding-left: 0px;
+}
+
+
+.btn.btn-primary{
+    float: right;
+    margin-top: 13px;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}

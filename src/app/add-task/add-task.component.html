@@ -1,0 +1,5 @@
+<div class="col-xs-12">
+    <input class="input-lg" type="text" placeholder="Add New Task" #newtask (keydown.enter)="add(newtask.value)">  
+    <button class="btn btn-primary" (click)="add(newtask.value)"> Save </button>
+</div>
+

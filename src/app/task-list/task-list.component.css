@@ -1,0 +1,56 @@
+.panel.panel-default{
+    box-shadow: 0px 0px 5px rgb(41, 36, 6);
+    background-color: rgb(253, 239, 108);
+    margin-bottom: 15px;
+}
+
+.glyphicon{
+  float:right;
+  display: none;
+}
+
+.panel-body:hover .glyphicon{
+  display:block;
+}
+
+.icons{
+    display:inline;
+}
+
+.col-xs-12{
+    overflow-y: scroll;
+    height: 551px;
+    background-color: rgb(245, 245, 220);
+    padding-top:15px;
+}
+
+
+.inputbox{
+    height: 30px;   
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -0.5px;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+
+.panel-body{
+    height: 60px; 
+    padding-block-start: 19px; 
+    font-size: medium;
+}
+
+.show-input-box{
+    visibility: visible;
+    display: inline-block;
+    bottom: 26px;
+    position: relative;
+    width: 879px;
+}
+
+.hide-input-box{
+    visibility: hidden;
+}
