@@ -3,6 +3,7 @@ div{
     height: 60px;
     border: 2px solid rgb(35, 18, 99);
     max-width: inherit;
+    margin-top: 10px;
 }
 
 .input-lg{

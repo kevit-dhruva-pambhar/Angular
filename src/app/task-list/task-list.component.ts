@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
 
+export interface ITask {
+  task: string,
+  edit: boolean
+}
+
+
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
+
+
 export class TaskListComponent implements OnInit {
-  tasks: string[];
+  tasks: ITask[];
   currentTask: string;
-  edit: boolean[] = [];
+  
+
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
@@ -22,16 +31,13 @@ export class TaskListComponent implements OnInit {
 
   getValue(id: number){
     // console.log(id);
-    this.edit[id] = true;
-    this.currentTask = this.tasks[id]; 
+    this.tasks[id].edit = true;
+    this.currentTask = this.tasks[id].task; 
   }
 
   taskEdit(id:number,newvalue: string){
    this.taskService.onTaskEdit(id,newvalue);
-   this.edit[id] = false;
+   this.tasks[id].edit = false;
   }
-
-
-
 
 }

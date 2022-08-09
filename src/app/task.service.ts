@@ -1,12 +1,17 @@
-
+import { ITask } from "./task-list/task-list.component";
 export class TaskService{
-    tasks = ['Task1' , 'Task2' , 'Task3' , 'Task4' , 'Task5' , 'Task6' , 'Task7' , 'Task8' , 'Task9' , 'Task10' , 'Task11' , 'Task12' , 'Task13' ];
-
+    tasks: ITask[] = [];
+    
     onAdd(task: string){
-        if(task==""){
+      const obj ={
+        task:task,
+        edit:false
+      }
+        if(!task.trim()){
           alert('Please enter some task');
+          return;
         }
-        this.tasks.push(task);
+        this.tasks.push(obj);
     }
 
     onDelete(id: number){
@@ -14,6 +19,6 @@ export class TaskService{
     }
         
     onTaskEdit(id:number,newvalue: string){
-        this.tasks[id] = newvalue;
+        this.tasks[id].task = newvalue;
      }
 }
