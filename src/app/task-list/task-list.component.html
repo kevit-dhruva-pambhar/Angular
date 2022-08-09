@@ -2,25 +2,22 @@
     <div class="col-xs-12">
         <div class="panel panel-default" 
             *ngFor="let task of tasks; let i = index">
-        <div class="panel-body"> <!-- (mouseover)="display=task" (mouseleave)="display=null" -->
-                <div> 
-                    {{ task }}  
-                    <!-- <span class="glyphicon glyphicon-trash" (click)="onDelete(i)" [ngClass]= "display===task ? 'show-icon' : 'hide-icon'"></span>  
-                    <span class="glyphicon glyphicon-pencil" (click)="edit=task" [ngClass]= "display===task ? 'show-icon' : 'hide-icon'">&nbsp;</span> -->
-                <div class="icons" >
-                    <span class="glyphicon glyphicon-trash" (click)="delete(i)"></span>
-                    <span class="glyphicon glyphicon-pencil" (click)="edit=task ; getValue(i)">&nbsp;</span>
-                </div>
-                </div> 
+            <div class="panel-body"> 
+                    
+                        <span *ngIf="!edit[i]"> {{ task }} 
+                            <div class="icons" >
+                                <span class="glyphicon glyphicon-trash" (click)="delete(i)"></span>
+                                <span class="glyphicon glyphicon-pencil" (click)="getValue(i)">&nbsp;</span>
+                            </div> 
+                        </span>  
 
-                <div [ngClass]="edit===task ? 'show-input-box' : 'hide-input-box'"> 
-                    <input class="inputbox"
-                            type="text" 
-                            [(ngModel)]="currentTask"
-                            #edited 
-                            (keydown.enter)="taskEdit(i,edited.value)">
-                </div> 
-        </div>  
+                        <input *ngIf="edit[i]"
+                                        class="inputbox"
+                                        type="text" 
+                                        [(ngModel)]="currentTask"
+                                        #edited 
+                                        (keydown.enter)="taskEdit(i,edited.value)">    
+            </div>  
         </div>
     </div>
 </div>

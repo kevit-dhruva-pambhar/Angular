@@ -1,24 +1,33 @@
-.col-xs-12{
-    background-color: rgb(253, 239, 108);
+div{
     border-radius: 5px;
     height: 60px;
+    border: 2px solid rgb(35, 18, 99);
+    max-width: inherit;
 }
 
 .input-lg{
     border: none;
     padding-top: 23px;
     box-shadow: none;
-    background-color: rgb(253, 239, 108);
-    padding-left: 0px;
+    padding-left: 16px;
+    width:70%;
 }
 
 
 .btn.btn-primary{
     float: right;
-    margin-top: 13px;
+    margin-top: 11px;
+    margin-right: 16px;
 }
 
 input:focus{
     outline: none;
     border: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .btn.btn-primary{
+        float: right;
+        margin-right: 14px;
+    }
 }

@@ -1,6 +1,6 @@
 .panel.panel-default{
-    box-shadow: 0px 0px 5px rgb(41, 36, 6);
-    background-color: rgb(253, 239, 108);
+   border: 1px solid rgb(62, 15, 100);
+    background-color: rgb(175, 185, 245);
     margin-bottom: 15px;
 }
 
@@ -18,10 +18,10 @@
 }
 
 .col-xs-12{
-    overflow-y: scroll;
     height: 551px;
-    background-color: rgb(245, 245, 220);
+    background-color: rgb(219, 212, 241);
     padding-top:15px;
+    overflow-y: scroll;
 }
 
 
@@ -29,7 +29,8 @@
     height: 30px;   
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-top: -0.5px;
+    margin-top: -3.5px;
+    width: 100%;
 }
 
 input:focus{
@@ -43,14 +44,16 @@ input:focus{
     font-size: medium;
 }
 
-.show-input-box{
-    visibility: visible;
-    display: inline-block;
-    bottom: 26px;
-    position: relative;
-    width: 879px;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.hide-input-box{
-    visibility: hidden;
+::-webkit-scrollbar-track {
+    background-color: rgb(160, 159, 159);
 }
+
+::-webkit-scrollbar-thumb {
+    background-color:  rgb(42, 28, 95);
+}
+
+

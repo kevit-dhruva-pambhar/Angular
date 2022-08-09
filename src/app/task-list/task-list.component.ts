@@ -9,6 +9,7 @@ import { TaskService } from '../task.service';
 export class TaskListComponent implements OnInit {
   tasks: string[];
   currentTask: string;
+  edit: boolean[] = [];
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
@@ -20,12 +21,14 @@ export class TaskListComponent implements OnInit {
   }
 
   getValue(id: number){
-    console.log(id);
+    // console.log(id);
+    this.edit[id] = true;
     this.currentTask = this.tasks[id]; 
   }
 
   taskEdit(id:number,newvalue: string){
    this.taskService.onTaskEdit(id,newvalue);
+   this.edit[id] = false;
   }
 
 
